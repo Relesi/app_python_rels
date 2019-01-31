@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-# coding:utf-8
+#C:\Program Files (x86)\Python37-32
+
 class models(object):
 	def __init__(self,ID="", nome="", idade=""):
 		self.ID = ID

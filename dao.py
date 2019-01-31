@@ -1,6 +1,11 @@
-#!/usr/bin/python3
-# coding:utf-8
-import MySQLdb as mdb
+#C:\Program Files (x86)\Python37-32
+
+#import MySQLdb as mdb
+
+import mysql as mdb 
+
+
+
 import sys
 import os
 from models import *
@@ -9,7 +14,7 @@ class DAO(models):
 	"""Classe responsável pelo banco de dados"""
 	def abre_conexao(self):
 		try:
-			con = mdb.connect('localhost', 'root', '123', 'crud');
+			con = mdb.connect('localhost', 'root', 'root', 'bdPython');
 			print("Conexão aberta")
 			return con
 		except Exception as e:
@@ -17,7 +22,7 @@ class DAO(models):
 
 	def fecha_conexao(self):
 		try:
-			con = mdb.connect('localhost', 'root', '123', 'crud');
+			con = mdb.connect('localhost', 'root', 'root', 'bdPython');
 			con.close()
 			print("Conexão encerrada")
 		except Exception as e:
